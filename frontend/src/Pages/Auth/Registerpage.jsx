@@ -27,7 +27,7 @@ const RegisterPage = () => { // Removed React.FC
     setLoading(true); // Set loading to true on submission
     try {
       // Assuming your backend sends a success message, but no specific data is needed on the frontend
-      await API.post('/auth/register', formData);
+      await API.post('https://online-event-management.onrender.com/api/auth/register', formData);
       toast.success('Registration successful! Please login.');
       navigate('/login');
     } catch (err) { // Removed type annotation : any
