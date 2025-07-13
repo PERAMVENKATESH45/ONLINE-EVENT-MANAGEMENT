@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
 
       if (token) {
         try {
-          const res = await API.get('/auth/me'); // Automatically attaches token if Axios interceptor is used
+          const res = await API.get('https://online-event-management.onrender.com/auth/me'); // Automatically attaches token if Axios interceptor is used
           setUser(res.data.user);
           setIsAuthenticated(true);
         } catch (error) {
