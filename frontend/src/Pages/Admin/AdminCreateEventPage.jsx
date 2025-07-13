@@ -43,7 +43,7 @@ const AdminCreateEventPage = () => { // Removed React.FC
         price: Number(formData.price),     // Convert string to number
       };
 
-      const res = await API.post('/admin/events/create', payload); // Removed explicit type <CreateEventResponse>
+      const res = await API.post('https://online-event-management.onrender.com/api/admin/events/create', payload); // Removed explicit type <CreateEventResponse>
       
       toast.success(res.data.message || 'Event created successfully!');
       navigate('/admin/allEvents'); // Navigate to the All Events list
