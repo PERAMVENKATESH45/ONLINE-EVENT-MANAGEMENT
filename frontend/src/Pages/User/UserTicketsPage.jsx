@@ -42,7 +42,7 @@ const UserTicketsPage = () => {
     }
 
     try {
-      const res = await API.delete(`/tickets/cancel/${ticketId}`);
+      const res = await API.delete(`https://online-event-management.onrender.com/api/tickets/cancel/${ticketId}`);
       toast.success(res.data.message || 'Ticket cancelled successfully!');
       fetchTickets();
     } catch (err) {
