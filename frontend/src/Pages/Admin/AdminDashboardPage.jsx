@@ -50,7 +50,7 @@ const AdminDashboardPage = () => {
       try {
         setLoading(true);
         setError(null);
-        const res = await API.get('/admin/dashboard');
+        const res = await API.get('https://online-event-management.onrender.com/api/admin/dashboard');
         setStats(res.data.stats);
       } catch (err) {
         console.error('Failed to fetch dashboard data:', err);
