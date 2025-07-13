@@ -35,7 +35,7 @@ const AdminEditEventPage = () => { // Removed React.FC
 
       try {
         setLoading(true);
-        const res = await API.get(`/admin/events/${id}`); // Removed type annotation <{ event: FetchedEvent }>
+        const res = await API.get(`https://online-event-management.onrender.com/api/admin/events/${id}`); // Removed type annotation <{ event: FetchedEvent }>
         const event = res.data.event;
 
         // Format date from ISO string to 'YYYY-MM-DDTHH:MM' for datetime-local input
