@@ -15,7 +15,7 @@ const AllEventsPage = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await API.get('/events/approved');
+      const res = await API.get('https://online-event-management.onrender.com/api/events/approved');
       setEvents(res.data.events || []);
     } catch (err) {
       console.error('Error fetching approved events:', err);
