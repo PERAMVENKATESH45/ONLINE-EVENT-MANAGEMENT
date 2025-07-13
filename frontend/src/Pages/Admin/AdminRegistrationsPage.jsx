@@ -16,7 +16,7 @@ const AdminRegistrationsPage = () => { // Removed React.FC type
   const fetchRegistrations = async () => {
     try {
       setLoading(true);
-      const res = await API.get('/admin/registrations'); // Removed type annotation <{ registrations: Registration[] }>
+      const res = await API.get('https://online-event-management.onrender.com/api/admin/registrations'); // Removed type annotation <{ registrations: Registration[] }>
       setRegistrations(res.data.registrations || []);
     } catch (err) { // Removed type annotation : any
       console.error('Error fetching registrations:', err);
