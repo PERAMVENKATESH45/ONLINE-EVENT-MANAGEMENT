@@ -23,7 +23,7 @@ const PaymentSuccessPage = () => {
     if (!loading && isAuthenticated && sessionId) {
       const confirmPayment = async () => {
         try {
-          const res = await API.post('api/payment/confirm', { sessionId });
+          const res = await API.post('api/payment/confirm/payment', { sessionId });
 
           if (res.status === 200) {
             setConfirmationStatus('success');
