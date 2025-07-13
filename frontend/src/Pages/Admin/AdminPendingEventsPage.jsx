@@ -17,7 +17,7 @@ const AdminPendingEventsPage = () => { // Removed React.FC type
     setLoading(true); // Ensure loading state is set true before fetch
     try {
       // In JavaScript, no explicit type annotation for API response is needed
-      const res = await API.get('/admin/pending-events');
+      const res = await API.get('https://online-event-management.onrender.com/api/admin/pending-events');
       setPendingEvents(res.data.events || []); // Handle potential empty array
     } catch (err) { // Removed type annotation : any
       console.error('Error fetching pending events:', err);
