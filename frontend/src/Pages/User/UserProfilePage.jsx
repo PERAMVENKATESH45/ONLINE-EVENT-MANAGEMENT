@@ -57,7 +57,7 @@ const UserProfilePage = () => { // Removed React.FC
       try {
         setLoadingProfile(true); // Start loading indicator for profile fetch
         // API call to fetch user's detailed profile. Authorization header is handled by axios interceptor.
-        const res = await API.get("/user/profile"); // Removed explicit type the API response
+        const res = await API.get("https://online-event-management.onrender.com/api/user/profile"); // Removed explicit type the API response
 
         // Populate form data with fetched user details
         setFormData({
