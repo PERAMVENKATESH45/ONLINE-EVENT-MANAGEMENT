@@ -12,7 +12,7 @@ const AdminAllUsersPage = () => {
   const fetchUsers = async () => {
     setLoading(true); 
     try {
-      const response = await API.get('/admin/users'); // Removed explicit type <{ users: User[] }>
+      const response = await API.get('https://online-event-management.onrender.com/api/admin/users'); // Removed explicit type <{ users: User[] }>
       setUsers(response.data.users || []); // Handle potential empty array
     } catch (error) { // Removed type annotation : any
       console.error('Error fetching users:', error);
