@@ -39,7 +39,7 @@ const UserDashboard = () => {
     setLoadingDashboard(true);
     try {
       // Fetch user profile
-      const userProfileRes = await API.get('/user/profile');
+      const userProfileRes = await API.get('https://online-event-management.onrender.com/api/user/profile');
       setUserProfile(userProfileRes.data.user);
 
       // Fetch user's registrations
