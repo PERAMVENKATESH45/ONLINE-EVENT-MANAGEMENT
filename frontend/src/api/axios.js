@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:3000/api', // 🔁 Change to production URL when deploying
+  baseURL: 'https://online-event-management.onrender.com', // 🔁 Change to production URL when deploying
   withCredentials: false, // Enable only if you use cookies (optional)
 });
 
