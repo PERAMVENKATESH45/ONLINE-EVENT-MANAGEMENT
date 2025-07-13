@@ -33,7 +33,7 @@ const BookingSuccessPage = () => { // Removed React.FC type
 
         // Make the API call to confirm the payment and booking
         // In JavaScript, no explicit type annotation for the API response is needed
-        const res = await API.post('/payment/confirm', { sessionId });
+        const res = await API.post('https://online-event-management.onrender.com/api/payment/confirm', { sessionId });
 
         setBookingInfo(res.data.registration); // Set the confirmed booking information
         toast.success('Your booking has been successfully confirmed!');
