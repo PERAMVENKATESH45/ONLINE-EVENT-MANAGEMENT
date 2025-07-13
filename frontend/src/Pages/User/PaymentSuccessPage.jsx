@@ -23,7 +23,7 @@ const PaymentSuccessPage = () => {
     if (!loading && isAuthenticated && sessionId) {
       const confirmPayment = async () => {
         try {
-          const res = await API.post('/payment/confirm/payment', { sessionId });
+          const res = await API.post('https://online-event-management.onrender.com/api/payment/confirm/payment', { sessionId });
 
           if (res.status === 200) {
             setConfirmationStatus('success');
