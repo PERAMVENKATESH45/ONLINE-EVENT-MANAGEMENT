@@ -27,7 +27,7 @@ const EventDetailsPage = () => { // Removed React.FC type
     setError(null); // Clear previous errors
     try {
       // In JavaScript, no explicit type annotation for API response is needed
-      const res = await API.get(`/events/${eventId}`);
+      const res = await API.get(`https://online-event-management.onrender.com/api/events/${eventId}`);
       setEvent(res.data.event);
 
       // Optionally pre-select the first ticket type if available
