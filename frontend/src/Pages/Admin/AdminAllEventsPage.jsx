@@ -17,7 +17,7 @@ const AdminAllEventsPage = () => { // Removed React.FC
   const fetchAllEvents = async () => {
     setLoading(true);
     try {
-      const res = await API.get('/admin/allEvents'); // Removed explicit type <{ events: Event[] }>
+      const res = await API.get('https://online-event-management.onrender.com/api/admin/allEvents'); // Removed explicit type <{ events: Event[] }>
       setEvents(res.data.events || []);
     } catch (err) { // Removed type annotation : any
       toast.error(err.response?.data?.message || 'Failed to fetch events');
