@@ -12,7 +12,7 @@ const AdminAllOrganizersPage = () => {
   const fetchOrganizers = async () => {
     setLoading(true); // Set loading to true when fetching starts
     try {
-      const response = await API.get('/admin/organizers'); // Removed explicit type <{ organizers: Organizer[] }>
+      const response = await API.get('https://online-event-management.onrender.com/api/admin/organizers'); // Removed explicit type <{ organizers: Organizer[] }>
       setOrganizers(response.data.organizers || []); // Handle potential empty array
     } catch (error) { // Removed type annotation : any
       console.error('Error fetching organizers:', error);
