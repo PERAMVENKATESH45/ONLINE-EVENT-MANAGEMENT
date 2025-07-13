@@ -81,7 +81,7 @@ const EventDetailsPage = () => { // Removed React.FC type
     try {
       // Send booking details to your backend's checkout endpoint
       // In JavaScript, no explicit type annotation for the API response is needed
-      const res = await API.post('/payment/checkout', {
+      const res = await API.post('https://online-event-management.onrender.com/api/payment/checkout', {
         eventId,
         ticketType: selectedTicketType, // This correctly sends the 'type' string (e.g., "General", "VIP")
         quantity,
