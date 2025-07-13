@@ -29,7 +29,7 @@ const HomePage = () => {
   const getEvents = async () => {
     setEventsLoading(true); // Set events loading true before fetch
     try {
-      const res = await API.get('/events'); // Removed type annotation <{ events: Event[] }>
+      const res = await API.get('https://online-event-management.onrender.com/api/events'); // Removed type annotation <{ events: Event[] }>
       const allEvents = res.data.events;
       setEvents(allEvents);
       setFilteredEvents(allEvents); // Initially, filtered events are all events
