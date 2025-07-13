@@ -28,7 +28,7 @@ const LoginPage = () => { // Removed React.FC
     e.preventDefault();
     setLoading(true); // Set loading to true on submission
     try {
-      const res = await API.post('/auth/login', formData); // Removed type annotation <LoginResponse>
+      const res = await API.post('https://online-event-management.onrender.com/api/auth/login', formData); // Removed type annotation <LoginResponse>
       const { token, user } = res.data;
 
       // Call the login function from AuthContext to handle state updates and localStorage
