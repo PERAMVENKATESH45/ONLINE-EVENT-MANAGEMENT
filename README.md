@@ -86,7 +86,7 @@ npm run dev
 🌐 Deployment
 Frontend:
 Deployed on Netlify
-URL: [https://eventmanagementvenky.netlify.app](https://eventmanagementvenky.netlify.app/)
+URL: https://eventmanagementvenky.netlify.app
 
 Backend:
 Deployed on Render
